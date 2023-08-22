@@ -27,7 +27,7 @@ services:
       - DEBUG
     volumes:
       - static_volume:/backend_static
-      - media_volume:/media/
+      - media_volume:/media
     depends_on:
       - db
 
@@ -44,6 +44,6 @@ services:
       - ALLOWED_HOSTS
     volumes:
       - static_volume:/static
-      - media_volume:/media/
+      - media_volume:/media
     ports:
       - 9000:80
