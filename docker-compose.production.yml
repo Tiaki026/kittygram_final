@@ -1,49 +1,47 @@
 version: '3'
+
 volumes:
-  pg_data:
-  static:
+  pg_data_production:
+  static_volume:
 
 networks:
   kittygram:
     driver: bridge
 
 services:
-
   db:
     image: postgres:13
     env_file: .env
     volumes:
-      - pg_data:/var/lib/postgresql/data
-    networks:
-      - kittygram
+      - pg_data_production:/var/lib/postgresql/data
 
   backend:
-    build: ./backend/
+    image: tiaki2601/kittygram_backend
     env_file: .env
     environment:
       - ALLOWED_HOSTS
     volumes:
-      # - static:/backend_static/
-      - static:/static_backend/
+      - static_volume:/static_backend/
     depends_on:
       - db
     networks:
       - kittygram
 
   frontend:
+    image: tiaki2601/kittygram_frontend
     env_file: .env
-    build: ./frontend/
     command: cp -r /app/build/. /frontend_static/
     volumes:
-      - static:/frontend_static/
+      - static_volume:/frontend_static/
     networks:
       - kittygram
 
   gateway:
-    build: ./nginx/
+    image: tiaki2601/kittygram_gateway
+    env_file: .env
     volumes:
-      - static:/media/
+      - static_volume:/media/
     ports:
-      - 8080:80 
+      - 8080:80
     networks:
       - kittygram
