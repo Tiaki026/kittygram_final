@@ -44,6 +44,6 @@ services:
       - ALLOWED_HOSTS
     volumes:
       - static_volume:/static
-      - media://var/www/kittygram/media
+      - media:/var/www/kittygram/media
     ports:
       - 9000:80
