@@ -9,6 +9,12 @@ services:
   db:
     image: postgres:13
     env_file: .env
+    environment:
+      - POSTGRES_DB
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - DB_HOST
+      - DB_PORT
     volumes:
       - pg_data_production:/var/lib/postgresql/data
 
@@ -17,6 +23,8 @@ services:
     env_file: .env
     environment:
       - ALLOWED_HOSTS
+      - SECRET_KEY
+      - DEBUG
     volumes:
       - static_volume:/backend_static
       - media:/media
@@ -25,7 +33,6 @@ services:
 
   frontend:
     image: tiaki2601/kittygram_frontend
-    env_file: .env
     command: cp -r /app/build/. /static/
     volumes:
       - static_volume:/static
@@ -33,6 +40,8 @@ services:
   gateway:
     image: tiaki2601/kittygram_gateway
     env_file: .env
+    environment:
+      - ALLOWED_HOSTS
     volumes:
       - static_volume:/static
       - media:/media
