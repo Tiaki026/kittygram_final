@@ -57,7 +57,7 @@ UPD:
   Django: Фреймворк для создания веб-приложений
 - ![DjangoREST](https://img.shields.io/badge/DJANGO-REST-ff1709?style=for-the-badge&logo=django&logoColor=white&color=ff1709&labelColor=gray)
 
-  Django Rest Framework: Расширение для Django, предоставляющее функциональность REST API
+   Django Rest Framework: Расширение для Django, предоставляющее функциональность REST API
 - ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
 
   Ubuntu: Операционная система
@@ -137,7 +137,7 @@ docker push <название образа>
 ```
 Создаем docker-compose.yml
 
- ![📂docker-compose](https://github.com/Tiaki026/kittygram_final/blob/main/docker-compose.yml)
+ [📂docker-compose](https://github.com/Tiaki026/kittygram_final/blob/main/docker-compose.yml)
  
 Команды для проверки docker-compose
 ```
@@ -148,9 +148,9 @@ docker compose up --build
 ```
 создаем docker-compose.productiom.yml и main.yml
 
- ![📂docker-compose.productiom.yml](https://github.com/Tiaki026/kittygram_final/blob/main/docker-compose.production.yml)
+ [📂docker-compose.productiom.yml](https://github.com/Tiaki026/kittygram_final/blob/main/docker-compose.production.yml)
  
- ![📂main.yml](https://github.com/Tiaki026/kittygram_final/blob/main/kittygram_workflow.yml)
+ [📂main.yml](https://github.com/Tiaki026/kittygram_final/blob/main/kittygram_workflow.yml)
 
 если в файлах все написано верно, то после команды `git push` на github в actions начнется тестирование образов (если имеются тесты), создадутся образы, запушатся на dockerhub, после прилетят на удаленный сервер и запустятся. А так же в телеграм прилетит сообщение от бота, что проект успешно задеплоен.
 
