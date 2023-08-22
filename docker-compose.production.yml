@@ -26,8 +26,8 @@ services:
       - SECRET_KEY
       - DEBUG
     volumes:
-      - static_volume:/backend_static
-      - media_volume:/media
+      - static_volume:/backend_static/
+      - media_volume:/media/
     depends_on:
       - db
 
@@ -35,7 +35,7 @@ services:
     image: tiaki2601/kittygram_frontend:latest
     command: cp -r /app/build/. /static/
     volumes:
-      - static_volume:/static
+      - static_volume:/static/
 
   gateway:
     image: tiaki2601/kittygram_gateway:latest
@@ -43,7 +43,7 @@ services:
     environment:
       - ALLOWED_HOSTS
     volumes:
-      - static_volume:/static
-      - media_volume:/media
+      - static_volume:/static/
+      - media_volume:/media/
     ports:
       - 9000:80
