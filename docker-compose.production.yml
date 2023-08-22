@@ -21,7 +21,7 @@ services:
     environment:
       - ALLOWED_HOSTS
     volumes:
-      - static_volume:/static_backend/
+      - static_volume:/backend_static
     depends_on:
       - db
     networks:
@@ -32,7 +32,7 @@ services:
     env_file: .env
     command: cp -r /app/build/. /frontend_static/
     volumes:
-      - static_volume:/frontend_static/
+      - static_volume:/frontend_static
     networks:
       - kittygram
 

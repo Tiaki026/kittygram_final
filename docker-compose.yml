@@ -23,8 +23,8 @@ services:
     environment:
       - ALLOWED_HOSTS
     volumes:
-      # - static:/backend_static/
-      - static:/static_backend/
+      - static:/backend_static
+      # - static:/static_backend/
     depends_on:
       - db
     networks:
@@ -35,7 +35,7 @@ services:
     build: ./frontend/
     command: cp -r /app/build/. /frontend_static/
     volumes:
-      - static:/frontend_static/
+      - static:/frontend_static
     networks:
       - kittygram
 
