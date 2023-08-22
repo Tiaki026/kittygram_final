@@ -117,13 +117,13 @@ sudo apt-get install docker-compose-plugin
 ```
 Создаем Dockerfile
 
- ![📂Dockerfile_backend](https://github.com/Tiaki026/kittygram_final/blob/main/backend/Dockerfile)
+ [📂Dockerfile_backend](https://github.com/Tiaki026/kittygram_final/blob/main/backend/Dockerfile)
+ 
+ [📂Dockerfile_frontend](https://github.com/Tiaki026/kittygram_final/blob/main/frontend/Dockerfile)
 
- ![📂Dockerfile_frontend](https://github.com/Tiaki026/kittygram_final/blob/main/frontend/Dockerfile)
+ [📂Dockerfile_gateway](https://github.com/Tiaki026/kittygram_final/blob/main/nginx/Dockerfile)
 
- ![📂Dockerfile_gateway](https://github.com/Tiaki026/kittygram_final/blob/main/nginx/Dockerfile)
-
- ![📂Conf nginx](https://github.com/Tiaki026/kittygram_final/blob/main/nginx/nginx.conf)
+ [📂Conf nginx](https://github.com/Tiaki026/kittygram_final/blob/main/nginx/nginx.conf)
 
 Создаем образы backend, frontend, gateway. Каждый из своей директории.
 ```
