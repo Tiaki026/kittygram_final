@@ -58,7 +58,7 @@ UPD:
 - ![DjangoREST](https://img.shields.io/badge/DJANGO-REST-ff1709?style=for-the-badge&logo=django&logoColor=white&color=ff1709&labelColor=gray)
 
   Django Rest Framework: Расширение для Django, предоставляющее функциональность REST API
-- 	![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
+- ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
 
   Ubuntu: Операционная система
 - ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
@@ -74,6 +74,7 @@ UPD:
 
   Gunicorn: WSGI-сервер для запуска веб-приложений на Python
 - ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+  
   Docker: Платформа для создания, развертывания и управления приложениями в изолированных средах.
 
 ## 🔑 Как воспользоваться проектром
