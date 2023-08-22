@@ -19,7 +19,7 @@ services:
       - pg_data_production:/var/lib/postgresql/data
 
   backend:
-    image: tiaki2601/kittygram_backend
+    image: tiaki2601/kittygram_backend:latest
     env_file: .env
     environment:
       - ALLOWED_HOSTS
@@ -32,13 +32,13 @@ services:
       - db
 
   frontend:
-    image: tiaki2601/kittygram_frontend
+    image: tiaki2601/kittygram_frontend:latest
     command: cp -r /app/build/. /static/
     volumes:
       - static_volume:/static
 
   gateway:
-    image: tiaki2601/kittygram_gateway
+    image: tiaki2601/kittygram_gateway:latest
     env_file: .env
     environment:
       - ALLOWED_HOSTS
