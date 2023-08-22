@@ -4,10 +4,6 @@ volumes:
   static:
   media:
 
-networks:
-  kittygram:
-    driver: bridge
-
 services:
 
   db:
@@ -15,8 +11,6 @@ services:
     env_file: .env
     volumes:
       - pg_data:/var/lib/postgresql/data
-    networks:
-      - kittygram
 
   backend:
     build: ./backend/
@@ -28,17 +22,13 @@ services:
       - media:/media
     depends_on:
       - db
-    networks:
-      - kittygram
 
   frontend:
     env_file: .env
     build: ./frontend/
-    command: cp -r /app/build/. /frontend_static/
+    command: cp -r /app/build/. /static/
     volumes:
-      - static:/frontend_static
-    networks:
-      - kittygram
+      - static:/static
 
   gateway:
     build: ./nginx/
@@ -47,5 +37,3 @@ services:
       - media:/media
     ports:
       - 8080:80 
-    networks:
-      - kittygram
