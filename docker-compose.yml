@@ -2,6 +2,7 @@ version: '3'
 volumes:
   pg_data:
   static:
+  media:
 
 networks:
   kittygram:
@@ -24,7 +25,7 @@ services:
       - ALLOWED_HOSTS
     volumes:
       - static:/backend_static
-      # - static:/static_backend/
+      - media:/media
     depends_on:
       - db
     networks:
@@ -42,7 +43,8 @@ services:
   gateway:
     build: ./nginx/
     volumes:
-      - static:/media/
+      - static:/static
+      - media:/media
     ports:
       - 8080:80 
     networks:
