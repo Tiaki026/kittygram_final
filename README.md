@@ -158,4 +158,6 @@ docker compose up --build
 
 Авторы:
       [Яндекс практикум](https://github.com/yandex-praktikum)
+      
       [Колотиков Евгений](https://github.com/Tiaki026)
+      
