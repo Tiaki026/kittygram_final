@@ -119,13 +119,13 @@ sudo apt-get install docker-compose-plugin
 ```
 Создаем Dockerfile
 
- [📂 Dockerfile_backend](https://github.com/Tiaki026/kittygram_final/blob/main/backend/Dockerfile)
+ [ Dockerfile_backend](https://github.com/Tiaki026/kittygram_final/blob/main/backend/Dockerfile)
  
- [📂 Dockerfile_frontend](https://github.com/Tiaki026/kittygram_final/blob/main/frontend/Dockerfile)
+ [ Dockerfile_frontend](https://github.com/Tiaki026/kittygram_final/blob/main/frontend/Dockerfile)
 
- [📂 Dockerfile_gateway](https://github.com/Tiaki026/kittygram_final/blob/main/nginx/Dockerfile)
+ [ Dockerfile_gateway](https://github.com/Tiaki026/kittygram_final/blob/main/nginx/Dockerfile)
 
- [📂 Conf nginx](https://github.com/Tiaki026/kittygram_final/blob/main/nginx/nginx.conf)
+ [ Conf nginx](https://github.com/Tiaki026/kittygram_final/blob/main/nginx/nginx.conf)
 
 Создаем образы backend, frontend, gateway. Каждый из своей директории.
 ```
@@ -139,7 +139,7 @@ docker push <название образа>
 ```
 Создаем docker-compose.yml
 
- [📂 docker-compose](https://github.com/Tiaki026/kittygram_final/blob/main/docker-compose.yml)
+ [ docker-compose](https://github.com/Tiaki026/kittygram_final/blob/main/docker-compose.yml)
  
 Команды для проверки docker-compose
 ```
@@ -150,9 +150,9 @@ docker compose up --build
 ```
 создаем docker-compose.productiom.yml и main.yml
 
- [📂 docker-compose.productiom.yml](https://github.com/Tiaki026/kittygram_final/blob/main/docker-compose.production.yml)
+ [ docker-compose.productiom.yml](https://github.com/Tiaki026/kittygram_final/blob/main/docker-compose.production.yml)
  
- [📂 main.yml](https://github.com/Tiaki026/kittygram_final/blob/main/kittygram_workflow.yml)
+ [ main.yml](https://github.com/Tiaki026/kittygram_final/blob/main/kittygram_workflow.yml)
 
 если в файлах все написано верно, то после команды `git push` на github в actions начнется тестирование образов (если имеются тесты), создадутся образы, запушатся на dockerhub, после прилетят на удаленный сервер и запустятся. А так же в телеграм прилетит сообщение от бота, что проект успешно задеплоен.
 
